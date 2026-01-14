@@ -7,6 +7,7 @@ const User = db.define(
     id: {
       type: DataTypes.UUIDV4,
       // o type UUIDV4 gera um id único automático, sem a necessidade de um campo autoIncrement.
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
     name: {
