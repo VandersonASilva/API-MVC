@@ -1,0 +1,8 @@
+.env
+node_modules/
+dist/
+
+# a pasta .env vai armazenar variáveis de ambiente, como senhas e chaves de API, que não devem ser compartilhadas publicamente.
+# A pasta node_modules/ contém todas as dependências do projeto instaladas via npm ou yarn, e não deve ser incluída no controle de versão.
+# A pasta dist/ geralmente contém arquivos compilados ou transpilados, que podem ser gerados a partir do código-fonte e não precisam ser versionados. 
+
