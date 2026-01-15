@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import jsw from "jsonwebtoken";
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN;
@@ -49,4 +49,12 @@ export async function login(email, password) {
       email: existUser.email,
     },
   };
+}
+
+export async function getUserById(userId) {
+  const user = await userRepository.findById(userId);
+  if (!user) {
+    throw { status: 404, message: "Usuário não encontrado." };
+  }
+  return user;
 }
